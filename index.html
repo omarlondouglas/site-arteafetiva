@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arte Afetiva — Papelaria Personalizada & Afetiva</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="https://pub-237657c8ca274dda82b4f50a8f047004.r2.dev/arte-afetiva/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="https://pub-237657c8ca274dda82b4f50a8f047004.r2.dev/arte-afetiva/favicon-192.png" />
+  <link rel="apple-touch-icon" href="https://pub-237657c8ca274dda82b4f50a8f047004.r2.dev/arte-afetiva/favicon-192.png" />
+
+  <!-- Fonts & Tailwind -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#fff5f8',
+              100: '#ffe8f0',
+              200: '#ffd0e1',
+              300: '#ffa8c7',
+              400: '#ff759f',
+              500: '#ff6899',
+              600: '#eb487f',
+              700: '#ca2d64',
+              800: '#a72552',
+              900: '#8a2347',
+            },
+            surface: {
+              DEFAULT: '#FAFAFA',
+              card: '#FFFFFF',
+              muted: '#F5F5F7',
+              border: '#EBEBEF',
+              dark: '#1C1C1E',
+              subtle: '#6E6E73'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #FAFAFA;
+      color: #1C1C1E;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    .glass-nav {
+      background: rgba(255, 255, 255, 0.82);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(0, 0, 0, 0.06);
+    }
+    .pill-btn {
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .pill-btn:hover {
+      transform: translateY(-1px);
+    }
+    .pill-btn:active {
+      transform: translateY(0px);
+    }
+    /* Hide scrollbar for tabs */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="selection:bg-brand-200 selection:text-brand-900 text-[15px] leading-relaxed">
+
+  <!-- Top Announcement Bar -->
+  <div class="bg-brand-500 text-white text-xs font-medium py-2 px-4 text-center tracking-wide flex items-center justify-center gap-2">
+    <span>✦ Produção artesanal com envio para todo o Brasil • Personalize cada detalhe no WhatsApp</span>
+  </div>
+
+  <!-- Floating Navigation -->
+  <header class="fixed top-4 sm:top-9 inset-x-0 z-40 px-4 md:px-8 pointer-events-none">
+    <div class="max-w-6xl mx-auto flex items-center justify-between pointer-events-auto">
+      
+      <!-- Nav Pills (Desktop) -->
+      <nav class="hidden md:flex items-center gap-1.5 glass-nav p-1.5 rounded-full shadow-sm">
+        <a href="#colecao" class="px-4 py-2 text-[13px] font-medium text-surface-subtle hover:text-surface-dark hover:bg-black/5 rounded-full pill-btn">Coleção</a>
+        <a href="#tamanhos" class="px-4 py-2 text-[13px] font-medium text-surface-subtle hover:text-surface-dark hover:bg-black/5 rounded-full pill-btn">Tamanhos de Sacolas</a>
+        <a href="#como-funciona" class="px-4 py-2 text-[13px] font-medium text-surface-subtle hover:text-surface-dark hover:bg-black/5 rounded-full pill-btn">Como Funciona</a>
+        <a href="#sobre" class="px-4 py-2 text-[13px] font-medium text-surface-subtle hover:text-surface-dark hover:bg-black/5 rounded-full pill-btn">Sobre</a>
+        <a href="#duvidas" class="px-4 py-2 text-[13px] font-medium text-surface-subtle hover:text-surface-dark hover:bg-black/5 rounded-full pill-btn">Dúvidas</a>
+      </nav>
+
+      <!-- Logo Center / Left Mobile -->
+      <a href="#" class="glass-nav px-4 py-2 rounded-full flex items-center gap-2.5 shadow-sm hover:opacity-90 transition">
+        <img src="https://pub-237657c8ca274dda82b4f50a8f047004.r2.dev/arte-afetiva/favicon-32.png" alt="Arte Afetiva" class="w-6 h-6 rounded-full object-cover ring-1 ring-brand-300" />
+        <span class="font-serif font-semibold text-base tracking-tight text-surface-dark">Arte Afetiva</span>
+      </a>
+
+      <!-- Right Actions: Cart & WhatsApp -->
+      <div class="flex items-center gap-2">
+        <button onclick="openCart()" class="glass-nav px-4 py-2 rounded-full flex items-center gap-2 shadow-sm text-[13px] font-medium text-surface-dark hover:bg-white transition">
+          <svg class="w-4 h-4 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+          </svg>
+          <span class="hidden sm:inline">Orçamento</span>
+          <span id="cart-badge" class="bg-brand-500 text-white text-[11px] font-bold px-1.5 py-0.2 rounded-full min-w-[18px] text-center">0</span>
+        </button>
+
+        <a href="https://wa.me/5521971324060?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Arte%20Afetiva%20e%20gostaria%20de%20fazer%20um%20or%C3%A7amento." target="_blank" class="bg-brand-500 hover:bg-brand-600 text-white text-[13px] font-medium px-4 py-2 rounded-full shadow-sm pill-btn flex items-center gap-1.5">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.297.144.35.491 1.199.534 1.286.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.275.072.376-.043.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.203c.043.072.043.419-.101.824z"/>
+          </svg>
+          <span class="hidden sm:inline">WhatsApp</span>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="pt-36 pb-16 md:pt-44 md:pb-24 px-4 md:px-8">
+    <div class="max-w-6xl mx-auto">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <!-- Hero Text -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-50 border border-brand-200 text-brand-700 text-xs font-semibold tracking-wide">
+            <span class="w-2 h-2 rounded-full bg-brand-400 animate-pulse"></span>
+            Papelaria Afetiva & Personalizada
+          </div>
+
+          <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl text-surface-dark tracking-tight leading-[1.12]">
+            Memórias que você <br/>
+            <span class="italic text-brand-500 font-normal">pode tocar.</span>
+          </h1>
+
+          <p class="text-surface-subtle text-base sm:text-lg max-w-xl font-normal leading-relaxed">
+            Sacolas personalizadas para elevar a experiência da sua marca, cadernos de intenções e registros que transformam sentimentos em presentes inesquecíveis.
+          </p>
+
+          <!-- CTAs -->
+          <div class="flex flex-wrap items-center gap-3 pt-2">
+            <a href="#colecao" class="bg-surface-dark hover:bg-black text-white px-7 py-3.5 rounded-full text-sm font-medium pill-btn shadow-sm flex items-center gap-2">
+              <span>Explorar Produtos</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </a>
+            
+            <a href="#tamanhos" class="bg-white hover:bg-surface-muted text-surface-dark border border-surface-border px-6 py-3.5 rounded-full text-sm font-medium pill-btn">
+              Tamanhos de Sacolas
+            </a>
+          </div>
+
+          <!-- Micro highlights -->
+          <div class="grid grid-cols-3 gap-2 sm:gap-4 pt-6 border-t border-surface-border max-w-md">
+            <div>
+              <p class="font-semibold text-surface-dark text-lg">100%</p>
+              <p class="text-xs text-surface-subtle">Personalizável</p>
+            </div>
+            <div>
+              <p class="font-semibold text-surface-dark text-lg">5 Tamanhos</p>
+              <p class="text-xs text-surface-subtle">De Mini a GG</p>
+            </div>
+            <div>
+              <p class="font-semibold text-surface-dark text-lg">Artesanal</p>
+              <p class="text-xs text-surface-subtle">Feito com Afeto</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Showcase Card / Visual -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative bg-white p-3 rounded-[32px] shadow-xl border border-surface-border overflow-hidden">
+            <div class="aspect-[4/5] rounded-[24px] overflow-hidden bg-brand-50 relative group">
+              <img src="https://pub-237657c8ca274dda82b4f50a8f047004.r2.dev/arte-afetiva/sacolas-hero.png" alt="Sacolas Personalizadas Arte Afetiva" class="w-full h-full object-cover object-center group-hover:scale-105 transition duration-700" />
+              
+              <!-- Floating Pill Tag -->
+              <div class="absolute bottom-4 inset-x-4 glass-nav p-3 rounded-2xl flex items-center justify-between">
+                <div>
+                  <p class="text-xs font-bold text-surface-dark">Sacolas Premium</p>
+                  <p class="text-[11px] text-surface-subtle">Alça de cetim & acabamento fosco</p>
+                </div>
+                <span class="bg-brand-500 text-white text-xs font-semibold px-3 py-1 rounded-full">Destaque</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Decorative Stamp -->
+          <div class="absolute -top-4 -right-4 bg-brand-100 border border-brand-300 text-brand-800 p-3 rounded-full shadow-md hidden sm:flex items-center justify-center w-20 h-20 text-center text-[10px] font-bold uppercase tracking-wider rotate-12">
+            Design & Afeto
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 1: Coleção de Produtos (Shop the Range) -->
+  <section id="colecao" class="py-20 bg-white border-y border-surface-border">
+    <div class="max-w-6xl mx-auto px-4 md:px-8">
+      
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-widest text-brand-500">Nosso Catálogo</span>
+          <h2 class="font-serif text-3xl sm:text-4xl text-surface-dark mt-1">Coleção Arte Afetiva</h2>
+        </div>
+        <p class="text-surface-subtle text-sm max-w-md">
+          Peças artesanais criadas para emocionar, presentear e valorizar marcas autorais com sofisticação e carinho.
+        </p>
+      </div>
+
+      <!-- Product Grid (3 Columns) -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Card 1: Sacolas Personalizadas -->
+        <article class="bg-surface rounded-3xl p-5 border border-surface-border flex flex-col justify-between hover:shadow-lg transition duration-300 group">
+          <div class="space-y-4">
+            <div class="aspect-[4/4.5] rounded-2xl overflow-hidden bg-brand-50 relative">
+              <img src="https://pub-237657c8ca274dda82b4f50a8f047004.r2.dev/arte-afetiva/sacolas-tamanhos.png" alt="Sacolas Personalizadas" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+              <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm text-[11px] font-semibold px-2.5 py-1 rounded-full text-surface-dark">
+                5 Tamanhos
+              </span>
+            </div>
+
+            <div>
+              <span class="text-[11px] font-semibold text-brand-500 uppercase tracking-wider">Identidade & Embalagem</span>
+              <h3 class="font-serif text-2xl text-surface-dark mt-0.5">Sacolas Personalizadas</h3>
+              <p class="text-xs text-surface-subtle mt-1.5 leading-relaxed">
+                Papel encorpado 240g, alças em fita de cetim ou gorgurão, ilhós reforçado e laminação fosca de toque aveludado.
+              </p>
+            </div>
+
+            <!-- Sizes preview chips -->
+            <div class="flex flex-wrap gap-1.5 pt-1">
+              <span class="text-[10px] bg-white border border-surface-border px-2 py-0.5 rounded-md text-surface-subtle">Mini</span>
+              <span class="text-[10px] bg-white border border-surface-border px-2 py-0.5 rounded-md text-surface-subtle">P</span>
+              <span class="text-[10px] bg-white border border-surface-border px-2 py-0.5 rounded-md text-surface-subtle">M Horiz.</span>
+              <span class="text-[10px] bg-white border border-surface-border px-2 py-0.5 rounded-md text-surface-subtle">G Vert.</span>
+              <span class="text-[10px] bg-white border border-surface-border px-2 py-0.5 rounded-md text-surface-subtle">GG Larga</span>
+            </div>
+          </div>
+
+          <div class="pt-5 mt-4 border-t border-surface-border flex items-center justify-between">
+            <a href="#tamanhos" class="text-xs font-semibold text-brand-600 hover:text-brand-700 underline underline-offset-4">Ver medidas ↗</a>
+            <button onclick="addToCart('Sacolas Personalizadas', 'Tamanhos Mini a GG')" class="bg-surface-dark hover:bg-brand-500 text-white text-xs font-medium px-4 py-2 rounded-full pill-btn transition">
+              + Orçar Sacolas
+            </button>
+          </div>
+        </article>
+
+        <!-- Card 2: Caderno de Manifestação -->
+        <article class="bg-surface rounded-3xl p-5 border border-surface-border flex flex-col justify-between hover:shadow-lg transition duration-300 group">
+          <div class="space-y-4">
+            <div class="aspect-[4/4.5] rounded-2xl overflow-hidden bg-brand-50 relative">
+              <img src="https://pub-237657c8ca274dda82b4f50a8f047004.r2.dev/arte-afetiva/caderno-manifestacao-1.png" alt="Caderno de Manifestação" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+              <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm text-[11px] font-semibold px-2.5 py-1 rounded-full text-surface-dark">
+                Capa Dura Premium
+              </span>
+            </div>
+
+            <div>
+              <span class="text-[11px] font-semibold text-brand-500 uppercase tracking-wider">Desenvolvimento & Intenção</span>
+              <h3 class="font-serif text-2xl text-surface-dark mt-0.5">Caderno de Manifestação</h3>
+              <p class="text-xs text-surface-subtle mt-1.5 leading-relaxed">
+                Diário guiado para metas, afirmações, gratidão e registros diários. Capa dura acetinada e miolo especial gramatura 90g.
+              </p>
+            </div>
+
+            <div class="flex flex-wrap gap-1.5 pt-1">
+              <span class="text-[10px] bg-white border border-surface-border px-2 py-0.5 rounded-md text-surface-subtle">Espiral Wire-o</span>
+              <span class="text-[10px] bg-white border border-surface-border px-2 py-0.5 rounded-md text-surface-subtle">Folhas 90g</span>
+              <span class="text-[10px] bg-white border border-surface-border px-2 py-0.5 rounded-md text-surface-subtle">Elástico Protetor</span>
+            </div>
+          </div>
+
+          <div class="pt-5 mt-4 border-t border-surface-border flex items-center justify-between">
+            <span class="text-xs font-semibold text-surface-dark">Edição Especial</span>
+            <button onclick="addToCart('Caderno de Manifestação', 'Capa Dura + Miolo 90g')" class="bg-surface-dark hover:bg-brand-500 text-white text-xs font-medium px-4 py-2 rounded-full pill-btn transition">
+              + Orçar Caderno
+            </button>
+          </div>
+        </article>
+
+        <!-- Card 3: Fotos Polaroid & Ímãs -->
+        <article class="bg-surface rounded-3xl p-5 border border-surface-border flex flex-col justify-between hover:shadow-lg transition duration-300 group">
+          <div class="space-y-4">
+            <div class="aspect-[4/4.5] rounded-2xl overflow-hidden bg-brand-50 relative">
+              <img src="https://pub-237657c8ca274dda82b4f50a8f047004.r2.dev/arte-afetiva/fotos-polaroid-1.png" alt="Fotos Polaroid & Ímãs" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+              <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm text-[11px] font-semibold px-2.5 py-1 rounded-full text-surface-dark">
+                Papel Fotográfico
+              </span>
+            </div>
+
+            <div>
+              <span class="text-[11px] font-semibold text-brand-500 uppercase tracking-wider">Memórias Físicas</span>
+              <h3 class="font-serif text-2xl text-surface-dark mt-0.5">Polaroids & Ímãs</h3>
+              <p class="text-xs text-surface-subtle mt-1.5 leading-relaxed">
+                Fotos estilo vintage com legenda personalizada, proteção UV contra desbotamento e opção de verso em ímã total para geladeira.
+              </p>
+            </div>
+
+            <div class="flex flex-wrap gap-1.5 pt-1">
+              <span class="text-[10px] bg-white border border-surface-border px-2 py-0.5 rounded-md text-surface-subtle">Kits c/ 10, 20 ou 30</span>
+              <span class="text-[10px] bg-white border border-surface-border px-2 py-0.5 rounded-md text-surface-subtle">Ímã Total</span>
+              <span class="text-[10px] bg-white border border-surface-border px-2 py-0.5 rounded-md text-surface-subtle">Com Legenda</span>
+            </div>
+          </div>
+
+          <div class="pt-5 mt-4 border-t border-surface-border flex items-center justify-between">
+            <span class="text-xs font-semibold text-surface-dark">Lembrança Afetiva</span>
+            <button onclick="addToCart('Fotos Polaroid / Ímãs', 'Kits com legendas personalizadas')" class="bg-surface-dark hover:bg-brand-500 text-white text-xs font-medium px-4 py-2 rounded-full pill-btn transition">
+              + Orçar Polaroids
+            </button>
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 2: Guia Visual de Medidas das Sacolas (Tabela Detalhada) -->
+  <section id="tamanhos" class="py-20 px-4 md:px-8">
+    <div class="max-w-6xl mx-auto">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        
+        <!-- Left: Informações & Tabela -->
+        <div class="lg:col-span-7 space-y-6">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-widest text-brand-500">Tabela de Medidas</span>
+            <h2 class="font-serif text-3xl sm:text-4xl text-surface-dark mt-1">Sacolas sob Medida para Seu Negócio</h2>
+            <p class="text-surface-subtle text-sm mt-2">
+              Escolha a dimensão exata para valorizar seu produto. Todas as sacolas acompanham reforço no fundo e alças de alta resistência.
+            </p>
+          </div>
+
+          <!-- Interactive Size Selector Cards -->
+          <div class="space-y-3">
+            
+            <!-- Mini -->
+            <div class="bg-white p-4 rounded-2xl border border-surface-border flex flex-col sm:flex-row sm:items-center justify-between gap-3 hover:border-brand-300 transition">
+              <div class="flex items-center gap-3">
+                <span class="w-8 h-8 rounded-full bg-brand-50 text-brand-600 font-bold text-xs flex items-center justify-center shrink-0">1</span>
+                <div>
+                  <h4 class="font-semibold text-surface-dark text-sm">Sacola Mini</h4>
+                  <p class="text-xs text-surface-subtle">9 cm (L) × 12,5 cm (A) × 4,5 cm (P)</p>
+                  <p class="text-[11px] text-brand-600">Ideal para: Joias, Makes, Acessórios e Lembrancinhas</p>
+                </div>
+              </div>
+              <button onclick="addToCart('Sacola Mini', '9x12,5x4,5cm')" class="self-end sm:self-center bg-surface-muted hover:bg-brand-500 hover:text-white text-surface-dark text-xs font-semibold px-3 py-1.5 rounded-full transition pill-btn">
+                + Adicionar
+              </button>
+            </div>
+
+            <!-- P -->
+            <div class="bg-white p-4 rounded-2xl border border-surface-border flex flex-col sm:flex-row sm:items-center justify-between gap-3 hover:border-brand-300 transition">
+              <div class="flex items-center gap-3">
+                <span class="w-8 h-8 rounded-full bg-brand-50 text-brand-600 font-bold text-xs flex items-center justify-center shrink-0">2</span>
+                <div>
+                  <h4 class="font-semibold text-surface-dark text-sm">Sacola P</h4>
+                  <p class="text-xs text-surface-subtle">12 cm (L) × 15,5 cm (A) × 8 cm (P)</p>
+                  <p class="text-[11px] text-brand-600">Ideal para: Cosméticos, Velas Aromáticas, Óculos</p>
+                </div>
+              </div>
+              <button onclick="addToCart('Sacola P', '12x15,5x8cm')" class="self-end sm:self-center bg-surface-muted hover:bg-brand-500 hover:text-white text-surface-dark text-xs font-semibold px-3 py-1.5 rounded-full transition pill-btn">
+                + Adicionar
+              </button>
+            </div>
+
+            <!-- M Horizontal -->
+            <div class="bg-white p-4 rounded-2xl border border-surface-border flex flex-col sm:flex-row sm:items-center justify-between gap-3 hover:border-brand-300 transition">
+              <div class="flex items-center gap-3">
+                <span class="w-8 h-8 rounded-full bg-brand-50 text-brand-600 font-bold text-xs flex items-center justify-center shrink-0">3</span>
+                <div>
+                  <h4 class="font-semibold text-surface-dark text-sm">Sacola M Horizontal</h4>
+                  <p class="text-xs text-surface-subtle">20 cm (L) × 15 cm (A) × 8 cm (P)</p>
+                  <p class="text-[11px] text-brand-600">Ideal para: Lingerie, Canecas, Livros e Roupas Infantis</p>
+                </div>
+              </div>
+              <button onclick="addToCart('Sacola M Horizontal', '20x15x8cm')" class="self-end sm:self-center bg-surface-muted hover:bg-brand-500 hover:text-white text-surface-dark text-xs font-semibold px-3 py-1.5 rounded-full transition pill-btn">
+                + Adicionar
+              </button>
+            </div>
+
+            <!-- G Vertical -->
+            <div class="bg-white p-4 rounded-2xl border border-surface-border flex flex-col sm:flex-row sm:items-center justify-between gap-3 hover:border-brand-300 transition">
+              <div class="flex items-center gap-3">
+                <span class="w-8 h-8 rounded-full bg-brand-50 text-brand-600 font-bold text-xs flex items-center justify-center shrink-0">4</span>
+                <div>
+                  <h4 class="font-semibold text-surface-dark text-sm">Sacola G Vertical</h4>
+                  <p class="text-xs text-surface-subtle">21 cm (L) × 29,7 cm (A) × 7,5 cm (P)</p>
+                  <p class="text-[11px] text-brand-600">Ideal para: Vestuário, Cadernos A4, Vinhos e Cosméticos</p>
+                </div>
+              </div>
+              <button onclick="addToCart('Sacola G Vertical', '21x29,7x7,5cm')" class="self-end sm:self-center bg-surface-muted hover:bg-brand-500 hover:text-white text-surface-dark text-xs font-semibold px-3 py-1.5 rounded-full transition pill-btn">
+                + Adicionar
+              </button>
+            </div>
+
+            <!-- GG Larga -->
+            <div class="bg-white p-4 rounded-2xl border border-surface-border flex flex-col sm:flex-row sm:items-center justify-between gap-3 hover:border-brand-300 transition">
+              <div class="flex items-center gap-3">
+                <span class="w-8 h-8 rounded-full bg-brand-50 text-brand-600 font-bold text-xs flex items-center justify-center shrink-0">5</span>
+                <div>
+                  <h4 class="font-semibold text-surface-dark text-sm">Sacola GG Larga</h4>
+                  <p class="text-xs text-surface-subtle">21 cm (L) × 29,7 cm (A) × 15,5 cm (P)</p>
+                  <p class="text-[11px] text-brand-600">Ideal para: Kits Volumosos, Caixas, Calçados e Casacos</p>
+                </div>
+              </div>
+              <button onclick="addToCart('Sacola GG Larga', '21x29,7x15,5cm')" class="self-end sm:self-center bg-surface-muted hover:bg-brand-500 hover:text-white text-surface-dark text-xs font-semibold px-3 py-1.5 rounded-full transition pill-btn">
+                + Adicionar
+              </button>
+            </div>
+
+          </div>
+
+          <div class="pt-2">
+            <button onclick="addToCart('Sacolas Personalizadas', 'Orçamento de Lote / Medidas Especiais')" class="w-full bg-brand-500 hover:bg-brand-600 text-white font-medium py-3.5 rounded-full text-sm pill-btn text-center shadow-sm">
+              Pedir Orçamento das Sacolas pelo WhatsApp
+            </button>
+          </div>
+        </div>
+
+        <!-- Right: Galeria de Detalhes Reais -->
+        <div class="lg:col-span-5 space-y-4">
+          <div class="grid grid-cols-2 gap-3">
+            <div class="rounded-2xl overflow-hidden border border-surface-border aspect-square bg-brand-50">
+              <img src="https://pub-237657c8ca274dda82b4f50a8f047004.r2.dev/arte-afetiva/sacola-detalhe-1.png" alt="Acabamento Sacola" class="w-full h-full object-cover hover:scale-105 transition duration-500" />
+            </div>
+            <div class="rounded-2xl overflow-hidden border border-surface-border aspect-square bg-brand-50">
+              <img src="https://pub-237657c8ca274dda82b4f50a8f047004.r2.dev/arte-afetiva/sacola-detalhe-2.png" alt="Fita e Ilhós" class="w-full h-full object-cover hover:scale-105 transition duration-500" />
+            </div>
+            <div class="rounded-2xl overflow-hidden border border-surface-border aspect-square bg-brand-50">
+              <img src="https://pub-237657c8ca274dda82b4f50a8f047004.r2.dev/arte-afetiva/sacola-detalhe-3.png" alt="Impressão em Alta Definição" class="w-full h-full object-cover hover:scale-105 transition duration-500" />
+            </div>
+            <div class="rounded-2xl overflow-hidden border border-surface-border aspect-square bg-brand-50">
+              <img src="https://pub-237657c8ca274dda82b4f50a8f047004.r2.dev/arte-afetiva/sacola-detalhe-4.png" alt="Embalagem Pronta" class="w-full h-full object-cover hover:scale-105 transition duration-500" />
+            </div>
+          </div>
+          
+          <div class="bg-brand-50 p-4 rounded-2xl border border-brand-200 text-center">
+            <p class="text-xs font-semibold text-brand-900">✨ Acabamento de Alta Precisão</p>
+            <p class="text-[11px] text-brand-700 mt-0.5">Laminação especial que protege contra umidade e arranhões.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 3: Como Funciona (Etapas Claras em Acordeão) -->
+  <section id="como-funciona" class="py-20 bg-white border-y border-surface-border">
+    <div class="max-w-6xl mx-auto px-4 md:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs font-bold uppercase tracking-widest text-brand-500">Passo a Passo Simples</span>
+        <h2 class="font-serif text-3xl sm:text-4xl text-surface-dark mt-1">Como personalizamos o seu pedido</h2>
+        <p class="text-surface-subtle text-sm mt-2">
+          Do primeiro contato até a entrega na sua porta: um processo leve, seguro e sem complicações.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        
+        <!-- Step 1 -->
+        <div class="bg-surface p-6 rounded-3xl border border-surface-border space-y-3 relative">
+          <span class="w-9 h-9 rounded-full bg-brand-500 text-white font-bold text-sm flex items-center justify-center">01</span>
+          <h3 class="font-serif text-xl text-surface-dark">Escolha o Produto</h3>
+          <p class="text-xs text-surface-subtle leading-relaxed">
+            Selecione o item desejado (sacolas, caderno, polaroids ou kit completo) e a quantidade ideal.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="bg-surface p-6 rounded-3xl border border-surface-border space-y-3 relative">
+          <span class="w-9 h-9 rounded-full bg-brand-500 text-white font-bold text-sm flex items-center justify-center">02</span>
+          <h3 class="font-serif text-xl text-surface-dark">Envio das Artes/Fotos</h3>
+          <p class="text-xs text-surface-subtle leading-relaxed">
+            Envie sua logo, paleta de cores ou fotos pelo WhatsApp. Se não tiver arte pronta, nós auxiliamos.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="bg-surface p-6 rounded-3xl border border-surface-border space-y-3 relative">
+          <span class="w-9 h-9 rounded-full bg-brand-500 text-white font-bold text-sm flex items-center justify-center">03</span>
+          <h3 class="font-serif text-xl text-surface-dark">Aprovação da Prévia</h3>
+          <p class="text-xs text-surface-subtle leading-relaxed">
+            Montamos uma simulação digital realista e só iniciamos a impressão após a sua aprovação total.
+          </p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="bg-surface p-6 rounded-3xl border border-surface-border space-y-3 relative">
+          <span class="w-9 h-9 rounded-full bg-brand-500 text-white font-bold text-sm flex items-center justify-center">04</span>
+          <h3 class="font-serif text-xl text-surface-dark">Produção & Envio</h3>
+          <p class="text-xs text-surface-subtle leading-relaxed">
+            Produzimos artesanalmente com controle rigoroso de qualidade e enviamos com código de rastreio.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 4: Galeria do Caderno & Afeto -->
+  <section class="py-20 px-4 md:px-8">
+    <div class="max-w-6xl mx-auto">
+      
+      <div class="bg-brand-50 rounded-[36px] p-8 md:p-14 border border-brand-200">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          
+          <div class="lg:col-span-6 space-y-6">
+            <span class="text-xs font-bold uppercase tracking-widest text-brand-600">Destaque Exclusivo</span>
+            <h2 class="font-serif text-3xl sm:text-4xl text-surface-dark leading-tight">
+              Caderno de Manifestação: <br/>
+              <span class="italic text-brand-600 font-normal">o seu ritual diário de intenção.</span>
+            </h2>
+            <p class="text-surface-subtle text-sm leading-relaxed">
+              Mais do que um caderno de anotações: um espaço sagrado para registrar seus sonhos, organizar suas metas e manter o foco nas suas conquistas dia após dia.
+            </p>
+
+            <ul class="space-y-2.5 text-xs text-surface-dark">
+              <li class="flex items-center gap-2">
+                <span class="text-brand-500 font-bold">✓</span> Capa dura fosca com toque macio e proteção contra sujeira
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-brand-500 font-bold">✓</span> Páginas para afirmações diárias, gratidão e metas do mês
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-brand-500 font-bold">✓</span> Gramatura especial para escrever com qualquer caneta sem vazar
+              </li>
+            </ul>
+
+            <div class="pt-2">
+              <button onclick="addToCart('Caderno de Manifestação', 'Edição Limitada c/ Capa Dura')" class="bg-brand-500 hover:bg-brand-600 text-white text-xs font-semibold px-6 py-3.5 rounded-full pill-btn shadow-sm">
+                Quero o Meu Caderno
+              </button>
+            </div>
+          </div>
+
+          <!-- Image Grid of the Notebook -->
+          <div class="lg:col-span-6 grid grid-cols-2 gap-3">
+            <div class="rounded-2xl overflow-hidden shadow-sm aspect-square bg-white">
+              <img src="https://pub-237657c8ca274dda82b4f50a8f047004.r2.dev/arte-afetiva/caderno-manifestacao-2.png" alt="Miolo Caderno" class="w-full h-full object-cover" />
+            </div>
+            <div class="rounded-2xl overflow-hidden shadow-sm aspect-square bg-white">
+              <img src="https://pub-237657c8ca274dda82b4f50a8f047004.r2.dev/arte-afetiva/caderno-manifestacao-3.png" alt="Detalhe do Caderno" class="w-full h-full object-cover" />
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 5: Sobre Nós / Manifesto -->
+  <section id="sobre" class="py-20 bg-white border-y border-surface-border">
+    <div class="max-w-4xl mx-auto px-4 md:px-8 text-center space-y-6">
+      <img src="https://pub-237657c8ca274dda82b4f50a8f047004.r2.dev/arte-afetiva/logo-white-bg.png" alt="Arte Afetiva" class="h-16 mx-auto object-contain" />
+      
+      <span class="text-xs font-bold uppercase tracking-widest text-brand-500">Nossa Essência</span>
+      <h2 class="font-serif text-3xl sm:text-4xl text-surface-dark">
+        Materializando afeto em um mundo 100% digital.
+      </h2>
+      
+      <p class="text-surface-subtle text-base leading-relaxed max-w-2xl mx-auto">
+        A <strong>Arte Afetiva</strong> nasceu da crença de que presentes, memórias e marcas merecem ser sentidos no mundo real. Uma foto impressa tem alma, uma sacola personalizada valoriza todo o trabalho de um empreendedor, e um caderno bem cuidado guarda os maiores planos de uma vida.
+      </p>
+
+      <div class="pt-4 flex items-center justify-center gap-3">
+        <a href="https://wa.me/5521971324060?text=Ol%C3%A1!%20Gostaria%20de%20conversar%20sobre%20a%20Arte%20Afetiva." target="_blank" class="border border-surface-border hover:bg-surface-muted text-surface-dark text-xs font-medium px-6 py-3 rounded-full pill-btn">
+          Falar com a Nossa Equipe no WhatsApp ↗
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Logística / Entregamos para todo o Brasil -->
+  <section class="py-16 bg-brand-50">
+    <div class="max-w-6xl mx-auto px-4 md:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-8 bg-white p-8 md:p-12 rounded-[32px] border border-brand-200 shadow-sm">
+        
+        <div class="flex-1 space-y-4">
+          <div class="inline-flex items-center justify-center w-12 h-12 bg-brand-100 text-brand-600 rounded-full mb-2">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </div>
+          <h2 class="font-serif text-2xl sm:text-3xl text-surface-dark">Entregamos afeto em todo o Brasil.</h2>
+          <p class="text-surface-subtle text-sm max-w-md leading-relaxed">
+            Seja no Rio, São Paulo, Nordeste ou no Sul, nossa produção artesanal chega até você com segurança e rastreio. Embalamos cada pedido como um presente.
+          </p>
+        </div>
+
+        <div class="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="bg-surface p-4 rounded-2xl border border-surface-border">
+            <p class="font-bold text-surface-dark text-lg mb-1">Correios</p>
+            <p class="text-[11px] text-surface-subtle">PAC e Sedex com seguro e rastreio garantido até a sua porta.</p>
+          </div>
+          <div class="bg-surface p-4 rounded-2xl border border-surface-border">
+            <p class="font-bold text-surface-dark text-lg mb-1">Transportadoras</p>
+            <p class="text-[11px] text-surface-subtle">Jadlog e Azul Cargo para opções mais rápidas de entrega.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 6: FAQ Accordion -->
+
+  <section id="duvidas" class="py-20 px-4 md:px-8">
+    <div class="max-w-3xl mx-auto space-y-8">
+      
+      <div class="text-center space-y-2">
+        <span class="text-xs font-bold uppercase tracking-widest text-brand-500">Tire Suas Dúvidas</span>
+        <h2 class="font-serif text-3xl text-surface-dark">Perguntas Frequentes</h2>
+      </div>
+
+      <div class="space-y-3">
+        
+        <!-- FAQ 1 -->
+        <details class="group bg-white p-5 rounded-2xl border border-surface-border [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex items-center justify-between cursor-pointer font-semibold text-sm text-surface-dark">
+            <span>Qual é a quantidade mínima para sacolas personalizadas?</span>
+            <span class="transition duration-300 group-open:rotate-180 text-brand-500">▼</span>
+          </summary>
+          <p class="text-xs text-surface-subtle mt-3 leading-relaxed">
+            Trabalhamos com tiragens acessíveis tanto para pequenos negócios e eventos quanto para lotes maiores com descontos progressivos. Chame no WhatsApp para ver a tabela exata de cada tamanho.
+          </p>
+        </details>
+
+        <!-- FAQ 2 -->
+        <details class="group bg-white p-5 rounded-2xl border border-surface-border [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex items-center justify-between cursor-pointer font-semibold text-sm text-surface-dark">
+            <span>Como faço para enviar meu logotipo ou fotos?</span>
+            <span class="transition duration-300 group-open:rotate-180 text-brand-500">▼</span>
+          </summary>
+          <p class="text-xs text-surface-subtle mt-3 leading-relaxed">
+            Você pode nos enviar os arquivos em PDF, PNG, JPEG ou vetor diretamente pelo WhatsApp ou por e-mail após a confirmação do pedido. Nós conferimos a qualidade antes de imprimir.
+          </p>
+        </details>
+
+        <!-- FAQ 3 -->
+        <details class="group bg-white p-5 rounded-2xl border border-surface-border [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex items-center justify-between cursor-pointer font-semibold text-sm text-surface-dark">
+            <span>Vocês enviam uma prévia antes de produzir?</span>
+            <span class="transition duration-300 group-open:rotate-180 text-brand-500">▼</span>
+          </summary>
+          <p class="text-xs text-surface-subtle mt-3 leading-relaxed">
+            Sim! 100% dos pedidos passam por uma aprovação visual digital no WhatsApp. Nós só enviamos para a máquina de impressão e montagem após o seu "OK".
+          </p>
+        </details>
+
+        <!-- FAQ 4 -->
+        <details class="group bg-white p-5 rounded-2xl border border-surface-border [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex items-center justify-between cursor-pointer font-semibold text-sm text-surface-dark">
+            <span>Qual é o prazo de confecção e envio?</span>
+            <span class="transition duration-300 group-open:rotate-180 text-brand-500">▼</span>
+          </summary>
+          <p class="text-xs text-surface-subtle mt-3 leading-relaxed">
+            O prazo médio de produção artesanal é de 5 a 10 dias úteis após a aprovação da arte, mais o prazo do frete (Correios ou transportadora) para o seu CEP.
+          </p>
+        </details>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA Banner Final -->
+  <section class="pb-20 px-4 md:px-8">
+    <div class="max-w-6xl mx-auto">
+      <div class="bg-gradient-to-r from-brand-600 via-brand-500 to-brand-400 rounded-[36px] p-8 md:p-14 text-white text-center space-y-6 shadow-xl">
+        <h2 class="font-serif text-3xl sm:text-4xl max-w-xl mx-auto leading-tight">
+          Pronto para transformar sua ideia em um presente inesquecível?
+        </h2>
+        <p class="text-white/90 text-sm max-w-md mx-auto">
+          Fale agora com nosso atendimento no WhatsApp, tire suas dúvidas e monte seu orçamento personalizado.
+        </p>
+        <div>
+          <a href="https://wa.me/5521971324060?text=Ol%C3%A1!%20Quero%20fazer%20um%20or%C3%A7amento%20de%20produtos%20personalizados%20na%20Arte%20Afetiva." target="_blank" class="inline-flex items-center gap-2 bg-white text-brand-700 hover:bg-brand-50 px-8 py-4 rounded-full font-semibold text-sm shadow-md pill-btn">
+            <span>Solicitar Orçamento no WhatsApp</span>
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.297.144.35.491 1.199.534 1.286.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.275.072.376-.043.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.203c.043.072.043.419-.101.824z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-surface-dark text-white pt-16 pb-12 border-t border-surface-dark">
+    <div class="max-w-6xl mx-auto px-4 md:px-8 space-y-12">
+      
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        
+        <div class="space-y-3 md:col-span-2">
+          <div class="flex items-center gap-2">
+            <span class="font-serif text-xl font-bold tracking-tight">Arte Afetiva</span>
+          </div>
+          <p class="text-xs text-white/60 max-w-sm leading-relaxed">
+            Papelaria personalizada e afetiva. Sacolas, diários, álbuns e detalhes que transformam qualquer ocasião em um momento memorável.
+          </p>
+        </div>
+
+        <div class="space-y-2">
+          <h5 class="text-xs font-bold uppercase tracking-wider text-brand-400">Navegação</h5>
+          <ul class="text-xs space-y-1.5 text-white/70">
+            <li><a href="#colecao" class="hover:text-white transition">Coleção de Produtos</a></li>
+            <li><a href="#tamanhos" class="hover:text-white transition">Guia de Medidas</a></li>
+            <li><a href="#como-funciona" class="hover:text-white transition">Como Funciona</a></li>
+            <li><a href="#sobre" class="hover:text-white transition">Sobre a Marca</a></li>
+          </ul>
+        </div>
+
+        <div class="space-y-2">
+          <h5 class="text-xs font-bold uppercase tracking-wider text-brand-400">Atendimento</h5>
+          <ul class="text-xs space-y-1.5 text-white/70">
+            <li>WhatsApp: (21) 97132-4060</li>
+            <li>Envios: Todo o Brasil</li>
+            <li>Horário: Seg a Sex, 9h às 18h</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between text-xs text-white/40 gap-4">
+        <p>© 2026 Arte Afetiva. Todos os direitos reservados.</p>
+        <p>Desenvolvido com carinho e precisão artesanal.</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Drawer do Carrinho / Orçamento (Lateral) -->
+  <div id="cart-drawer" class="fixed inset-0 z-50 pointer-events-none transition-all duration-300 opacity-0">
+    <!-- Backdrop -->
+    <div onclick="closeCart()" class="absolute inset-0 bg-black/40 backdrop-blur-sm pointer-events-auto"></div>
+    
+    <!-- Drawer Panel -->
+    <div class="absolute right-0 top-0 bottom-0 w-full max-w-md bg-white shadow-2xl p-6 flex flex-col justify-between pointer-events-auto transform translate-x-full transition-transform duration-300" id="drawer-panel">
+      
+      <div>
+        <div class="flex items-center justify-between pb-4 border-b border-surface-border">
+          <div class="flex items-center gap-2">
+            <h3 class="font-serif text-xl font-bold text-surface-dark">Seu Orçamento</h3>
+            <span id="drawer-count" class="bg-brand-100 text-brand-700 text-xs font-bold px-2 py-0.5 rounded-full">0 itens</span>
+          </div>
+          <button onclick="closeCart()" class="w-8 h-8 rounded-full bg-surface-muted hover:bg-surface-border flex items-center justify-center text-surface-subtle font-bold">✕</button>
+        </div>
+
+        <!-- Items List -->
+        <div id="cart-items" class="py-4 space-y-3 max-h-[60vh] overflow-y-auto">
+          <!-- Empty State -->
+          <div id="cart-empty" class="text-center py-12 space-y-3">
+            <p class="text-sm text-surface-subtle">Nenhum item adicionado ainda.</p>
+            <p class="text-xs text-surface-subtle/80">Clique em "+ Orçar" nos produtos para montar sua lista personalizada.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Drawer Footer -->
+      <div class="pt-4 border-t border-surface-border space-y-3">
+        <button id="send-whatsapp-btn" onclick="sendCartToWhatsApp()" class="w-full bg-brand-500 hover:bg-brand-600 text-white font-medium py-3.5 rounded-full text-sm pill-btn flex items-center justify-center gap-2 shadow-sm disabled:opacity-50 disabled:cursor-not-allowed">
+          <span>Enviar Orçamento no WhatsApp</span>
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.297.144.35.491 1.199.534 1.286.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.275.072.376-.043.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.203c.043.072.043.419-.101.824z"/>
+          </svg>
+        </button>
+
+        <button onclick="closeCart()" class="w-full bg-surface-muted hover:bg-surface-border text-surface-dark font-medium py-2.5 rounded-full text-xs pill-btn">
+          Continuar Navegando
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  
+  <!-- Cart Script Logic -->
+  <script>
+    let cart = [];
+
+    function addToCart(product, detail) {
+      cart.push({ product: product, detail: detail, id: Date.now() });
+      updateCartUI();
+      openCart();
+    }
+
+    function removeFromCart(id) {
+      cart = cart.filter(item => item.id !== id);
+      updateCartUI();
+    }
+
+    function updateCartUI() {
+      const badge = document.getElementById('cart-badge');
+      const drawerCount = document.getElementById('drawer-count');
+      const container = document.getElementById('cart-items');
+      const emptyState = document.getElementById('cart-empty');
+      const sendBtn = document.getElementById('send-whatsapp-btn');
+
+      badge.innerText = cart.length;
+      drawerCount.innerText = `${cart.length} ${cart.length === 1 ? 'item' : 'itens'}`;
+
+      if (cart.length === 0) {
+        emptyState.style.display = 'block';
+        container.innerHTML = '';
+        container.appendChild(emptyState);
+        sendBtn.disabled = true;
+      } else {
+        emptyState.style.display = 'none';
+        container.innerHTML = '';
+        cart.forEach(item => {
+          const el = document.createElement('div');
+          el.className = 'bg-surface p-3.5 rounded-2xl border border-surface-border flex items-center justify-between gap-3';
+          el.innerHTML = `
+            <div>
+              <p class="font-semibold text-xs text-surface-dark">${item.product}</p>
+              <p class="text-[11px] text-surface-subtle">${item.detail}</p>
+            </div>
+            <button onclick="removeFromCart(${item.id})" class="text-xs text-brand-600 hover:text-brand-800 font-semibold p-1 transition">Remover</button>
+          `;
+          container.appendChild(el);
+        });
+        sendBtn.disabled = false;
+      }
+    }
+
+    function openCart() {
+      const drawer = document.getElementById('cart-drawer');
+      const panel = document.getElementById('drawer-panel');
+      drawer.classList.remove('opacity-0', 'pointer-events-none');
+      drawer.classList.add('opacity-100', 'pointer-events-auto');
+      panel.classList.remove('translate-x-full');
+      panel.classList.add('translate-x-0');
+    }
+
+    function closeCart() {
+      const drawer = document.getElementById('cart-drawer');
+      const panel = document.getElementById('drawer-panel');
+      drawer.classList.add('opacity-0', 'pointer-events-none');
+      drawer.classList.remove('opacity-100', 'pointer-events-auto');
+      panel.classList.add('translate-x-full');
+      panel.classList.remove('translate-x-0');
+    }
+
+    function sendCartToWhatsApp() {
+      if (cart.length === 0) return;
+      
+      let msg = `Olá! Vim pelo site da Arte Afetiva e gostaria de solicitar um orçamento para os seguintes itens:\n\n`;
+      cart.forEach((item, idx) => {
+        msg += `${idx + 1}. *${item.product}* (${item.detail})\n`;
+      });
+      msg += `\nComo podemos prosseguir com o envio das fotos/arte e prazos?`;
+
+      const encoded = encodeURIComponent(msg);
+      window.open(`https://wa.me/5521971324060?text=${encoded}`, '_blank');
+    }
+
+    // Initialize UI on load
+    updateCartUI();
+  </script>
+
+
+</body>
+</html>
