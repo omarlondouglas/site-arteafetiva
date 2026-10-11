@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kit Coleção de Memórias do Bebê — Arte Afetiva</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="https://pub-237657c8ca274dda82b4f50a8f047004.r2.dev/arte-afetiva/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="https://pub-237657c8ca274dda82b4f50a8f047004.r2.dev/arte-afetiva/favicon-192.png" />
+  <link rel="apple-touch-icon" href="https://pub-237657c8ca274dda82b4f50a8f047004.r2.dev/arte-afetiva/favicon-192.png" />
+
+  <!-- Fonts & Tailwind -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#fff5f8',
+              100: '#ffe8f0',
+              200: '#ffd0e1',
+              300: '#ffa8c7',
+              400: '#ff759f',
+              500: '#ff6899',
+              600: '#eb487f',
+              700: '#ca2d64',
+              800: '#a72552',
+              900: '#8a2347',
+            },
+            surface: {
+              DEFAULT: '#FAFAFA',
+              card: '#FFFFFF',
+              muted: '#F5F5F7',
+              border: '#EBEBEF',
+              dark: '#1C1C1E',
+              subtle: '#6E6E73'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #FAFAFA;
+      color: #1C1C1E;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    .glass-nav {
+      background: rgba(255, 255, 255, 0.86);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(0, 0, 0, 0.06);
+    }
+    .pill-btn {
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .pill-btn:hover {
+      transform: translateY(-1px);
+    }
+    .pill-btn:active {
+      transform: translateY(0px);
+    }
+  </style>
+</head>
+<body class="selection:bg-brand-200 selection:text-brand-900 text-[15px] leading-relaxed">
+
+  <!-- Top Announcement Bar -->
+  <div class="bg-brand-500 text-white text-xs font-medium py-2 px-4 text-center tracking-wide flex items-center justify-center gap-2">
+    <span>✦ SEM ASSINATURA • PREÇO ÚNICO • O Kit definitivo para eternizar cada fase do seu bebê</span>
+  </div>
+
+  <!-- Floating Navigation -->
+  <header class="fixed top-4 sm:top-9 inset-x-0 z-40 px-4 md:px-8 pointer-events-none">
+    <div class="max-w-6xl mx-auto flex items-center justify-between pointer-events-auto">
+      
+      <!-- Nav Pills (Desktop) -->
+      <nav class="hidden md:flex items-center gap-1.5 glass-nav p-1.5 rounded-full shadow-sm">
+        <a href="index.html" class="px-4 py-2 text-[13px] font-medium text-surface-subtle hover:text-surface-dark hover:bg-black/5 rounded-full pill-btn">← Voltar para Sacolas</a>
+        <a href="#o-que-vem" class="px-4 py-2 text-[13px] font-medium text-surface-subtle hover:text-surface-dark hover:bg-black/5 rounded-full pill-btn">O que vem no Kit</a>
+        <a href="#dilema" class="px-4 py-2 text-[13px] font-medium text-surface-subtle hover:text-surface-dark hover:bg-black/5 rounded-full pill-btn">Para quem é</a>
+        <a href="#como-funciona" class="px-4 py-2 text-[13px] font-medium text-surface-subtle hover:text-surface-dark hover:bg-black/5 rounded-full pill-btn">Como Funciona</a>
+        <a href="#garantia" class="px-4 py-2 text-[13px] font-medium text-surface-subtle hover:text-surface-dark hover:bg-black/5 rounded-full pill-btn">Qualidade</a>
+        <a href="#duvidas" class="px-4 py-2 text-[13px] font-medium text-surface-subtle hover:text-surface-dark hover:bg-black/5 rounded-full pill-btn">Dúvidas</a>
+      </nav>
+
+      <!-- Logo Center / Left Mobile -->
+      <a href="index.html" class="glass-nav px-4 py-2 rounded-full flex items-center gap-2.5 shadow-sm hover:opacity-90 transition">
+        <img src="https://pub-237657c8ca274dda82b4f50a8f047004.r2.dev/arte-afetiva/favicon-32.png" alt="Arte Afetiva" class="w-6 h-6 rounded-full object-cover ring-1 ring-brand-300" />
+        <span class="font-serif font-semibold text-base tracking-tight text-surface-dark">Arte Afetiva</span>
+      </a>
+
+      <!-- Right Actions: WhatsApp CTA -->
+      <div class="flex items-center gap-2">
+        <a href="index.html" class="hidden sm:inline-flex text-xs font-semibold text-surface-subtle hover:text-brand-600 glass-nav px-3 py-2 rounded-full">
+          Papelaria & Sacolas
+        </a>
+        <a href="https://wa.me/5521971324060?text=Ol%C3%A1!%20Gostaria%20de%20pedir%20o%20Kit%20Cole%C3%A7%C3%A3o%20de%20Mem%C3%B3rias%20do%20Beb%C3%AA%20(Pre%C3%A7o%20%C3%9Anico)." target="_blank" class="bg-brand-500 hover:bg-brand-600 text-white text-[13px] font-medium px-4 py-2 rounded-full shadow-sm pill-btn flex items-center gap-1.5">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.297.144.35.491 1.199.534 1.286.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.275.072.376-.043.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.203c.043.072.043.419-.101.824z"/>
+          </svg>
+          <span class="hidden sm:inline">Pedir no WhatsApp</span>
+          <span class="sm:hidden">Pedir</span>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="pt-32 pb-16 md:pt-40 md:pb-20 px-4 md:px-8">
+    <div class="max-w-6xl mx-auto">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <!-- Hero Copy -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-50 border border-brand-200 text-brand-700 text-xs font-semibold tracking-wide">
+            <span class="w-2 h-2 rounded-full bg-brand-400 animate-pulse"></span>
+            Sem Mensalidades • Pagamento Único • Revelação Profissional
+          </div>
+
+          <h1 class="font-serif text-3xl sm:text-5xl md:text-6xl text-surface-dark tracking-tight leading-[1.12]">
+            Seu bebê muda tão rápido. <br/>
+            <span class="italic text-brand-500 font-normal">Colecione cada fase para ele ver no futuro.</span>
+          </h1>
+
+          <p class="text-surface-subtle text-base sm:text-lg max-w-xl font-normal leading-relaxed">
+            Não deixe as memórias mais puras da infância perdidas na galeria do celular. Receba um Kit completo com <strong>Livro de Memórias</strong>, <strong>Fotos Polaroids</strong>, <strong>Foto Ímã</strong> e <strong>Pôster</strong> para eternizar essa história para sempre.
+          </p>
+
+          <!-- CTAs -->
+          <div class="flex flex-wrap items-center gap-3 pt-2">
+            <a href="https://wa.me/5521971324060?text=Ol%C3%A1!%20Quero%20garantir%20meu%20Kit%20Cole%C3%A7%C3%A3o%20de%20Mem%C3%B3rias%20por%20pre%C3%A7o%20%C3%BAnico." target="_blank" class="bg-brand-500 hover:bg-brand-600 text-white px-8 py-4 rounded-full text-sm font-semibold pill-btn shadow-lg shadow-brand-500/20 flex items-center gap-2">
+              <span>Garantir Meu Kit de Memórias</span>
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.297.144.35.491 1.199.534 1.286.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.275.072.376-.043.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.203c.043.072.043.419-.101.824z"/>
+              </svg>
+            </a>
+            
+            <a href="#o-que-vem" class="bg-white hover:bg-surface-muted text-surface-dark border border-surface-border px-6 py-4 rounded-full text-sm font-medium pill-btn">
+              Ver o que vem no Kit ↓
+            </a>
+          </div>
+
+          <!-- Micro highlights -->
+          <div class="grid grid-cols-3 gap-2 sm:gap-4 pt-6 border-t border-surface-border max-w-lg">
+            <div>
+              <p class="font-bold text-surface-dark text-base sm:text-lg">Preço Único</p>
+              <p class="text-xs text-surface-subtle">Sem mensalidades</p>
+            </div>
+            <div>
+              <p class="font-bold text-surface-dark text-base sm:text-lg">Papel Pro</p>
+              <p class="text-xs text-surface-subtle">Dura até 100+ anos</p>
+            </div>
+            <div>
+              <p class="font-bold text-surface-dark text-base sm:text-lg">Brasil Todo</p>
+              <p class="text-xs text-surface-subtle">Entrega com rastreio</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Showcase Card -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative bg-white p-3 rounded-[32px] shadow-xl border border-surface-border overflow-hidden">
+            <div class="aspect-[4/4.5] rounded-[24px] overflow-hidden bg-brand-50 relative group">
+              <img src="https://pub-237657c8ca274dda82b4f50a8f047004.r2.dev/arte-afetiva/memorias/hero-family.png" alt="Mãe com bebê colecionando memórias" class="w-full h-full object-cover object-center group-hover:scale-105 transition duration-700" />
+              
+              <!-- Floating Pill Tag -->
+              <div class="absolute bottom-4 inset-x-4 glass-nav p-3 rounded-2xl flex items-center justify-between">
+                <div>
+                  <p class="text-xs font-bold text-surface-dark">Coleção Completa</p>
+                  <p class="text-[11px] text-surface-subtle">Livro + Polaroids + Ímã + Pôster</p>
+                </div>
+                <span class="bg-brand-500 text-white text-xs font-semibold px-3 py-1 rounded-full">Preço Único</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="absolute -top-4 -right-4 bg-brand-100 border border-brand-300 text-brand-800 p-3 rounded-full shadow-md hidden sm:flex items-center justify-center w-20 h-20 text-center text-[10px] font-bold uppercase tracking-wider rotate-12">
+            100% Afeto
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 1: O Que Vou Receber (Itens do Kit) -->
+  <section id="o-que-vem" class="py-20 bg-white border-y border-surface-border">
+    <div class="max-w-6xl mx-auto px-4 md:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs font-bold uppercase tracking-widest text-brand-500">Tudo incluso no pacote</span>
+        <h2 class="font-serif text-3xl sm:text-4xl text-surface-dark mt-1">O que vem no seu Kit de Memórias?</h2>
+        <p class="text-surface-subtle text-sm mt-2">
+          Um pacote completo pensado com carinho para você guardar as recordações mais especiais sem complicação.
+        </p>
+      </div>
+
+      <!-- 4 Cards Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Card 1: Livro de Memórias -->
+        <div class="bg-surface rounded-3xl p-5 border border-surface-border flex flex-col justify-between hover:shadow-lg transition duration-300">
+          <div class="space-y-4">
+            <div class="aspect-square rounded-2xl overflow-hidden bg-brand-50 relative">
+              <img src="https://pub-237657c8ca274dda82b4f50a8f047004.r2.dev/arte-afetiva/memorias/livro-de-memorias.png" alt="Livro de Memórias do Bebê" class="w-full h-full object-cover" />
+            </div>
+            <div>
+              <span class="text-[10px] font-bold text-brand-600 uppercase tracking-wider">Item Principal</span>
+              <h3 class="font-serif text-xl text-surface-dark mt-0.5">1 Livro de Memórias</h3>
+              <p class="text-xs text-surface-subtle mt-1.5 leading-relaxed">
+                Álbum exclusivo de capa dura com páginas decoradas para colar suas fotos, registrar datas e primeiros passos.
+              </p>
+            </div>
+          </div>
+          <div class="pt-4 border-t border-surface-border mt-4">
+            <span class="text-[11px] font-semibold text-brand-600">✦ Guarde por gerações</span>
+          </div>
+        </div>
+
+        <!-- Card 2: Fotos Polaroids -->
+        <div class="bg-surface rounded-3xl p-5 border border-surface-border flex flex-col justify-between hover:shadow-lg transition duration-300">
+          <div class="space-y-4">
+            <div class="aspect-square rounded-2xl overflow-hidden bg-brand-50 relative">
+              <img src="https://pub-237657c8ca274dda82b4f50a8f047004.r2.dev/arte-afetiva/memorias/polaroids-secao-itens-site.png" alt="Fotos Polaroids" class="w-full h-full object-cover" />
+            </div>
+            <div>
+              <span class="text-[10px] font-bold text-brand-600 uppercase tracking-wider">Revelação Pro</span>
+              <h3 class="font-serif text-xl text-surface-dark mt-0.5">Fotos Polaroids</h3>
+              <p class="text-xs text-surface-subtle mt-1.5 leading-relaxed">
+                Kit com fotos em formato retrô clássico, papel fotográfico premium à prova de desbotamento e com legendas personalizadas.
+              </p>
+            </div>
+          </div>
+          <div class="pt-4 border-t border-surface-border mt-4">
+            <span class="text-[11px] font-semibold text-brand-600">✦ Legendas que contam histórias</span>
+          </div>
+        </div>
+
+        <!-- Card 3: Foto Ímã -->
+        <div class="bg-surface rounded-3xl p-5 border border-surface-border flex flex-col justify-between hover:shadow-lg transition duration-300">
+          <div class="space-y-4">
+            <div class="aspect-square rounded-2xl overflow-hidden bg-brand-50 relative">
+              <img src="https://pub-237657c8ca274dda82b4f50a8f047004.r2.dev/arte-afetiva/memorias/foto-ima.png" alt="Foto Ímã para Geladeira" class="w-full h-full object-cover" />
+            </div>
+            <div>
+              <span class="text-[10px] font-bold text-brand-600 uppercase tracking-wider">No Dia a Dia</span>
+              <h3 class="font-serif text-xl text-surface-dark mt-0.5">1 Foto Ímã</h3>
+              <p class="text-xs text-surface-subtle mt-1.5 leading-relaxed">
+                Ímã total de geladeira com a foto mais especial do seu pequeno, para encher a sua cozinha de afeto todos os dias.
+              </p>
+            </div>
+          </div>
+          <div class="pt-4 border-t border-surface-border mt-4">
+            <span class="text-[11px] font-semibold text-brand-600">✦ Sempre à vista</span>
+          </div>
+        </div>
+
+        <!-- Card 4: Pôster 15x21cm -->
+        <div class="bg-surface rounded-3xl p-5 border border-surface-border flex flex-col justify-between hover:shadow-lg transition duration-300">
+          <div class="space-y-4">
+            <div class="aspect-square rounded-2xl overflow-hidden bg-brand-50 relative">
+              <img src="https://pub-237657c8ca274dda82b4f50a8f047004.r2.dev/arte-afetiva/memorias/poster-15X21.png" alt="Pôster 15x21cm" class="w-full h-full object-cover" />
+            </div>
+            <div>
+              <span class="text-[10px] font-bold text-brand-600 uppercase tracking-wider">Decoração</span>
+              <h3 class="font-serif text-xl text-surface-dark mt-0.5">1 Pôster 15x21cm</h3>
+              <p class="text-xs text-surface-subtle mt-1.5 leading-relaxed">
+                Pôster artístico ideal para porta-retrato da cabeceira ou para montar um mural afetivo no quartinho do bebê.
+              </p>
+            </div>
+          </div>
+          <div class="pt-4 border-t border-surface-border mt-4">
+            <span class="text-[11px] font-semibold text-brand-600">✦ Pronto para emoldurar</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Caixa de Envio Highlight -->
+      <div class="mt-12 bg-brand-50 p-6 md:p-8 rounded-3xl border border-brand-200 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-4">
+          <img src="https://pub-237657c8ca274dda82b4f50a8f047004.r2.dev/arte-afetiva/memorias/livro-memorias-caixa-polaroide.png" alt="Caixa e Livro" class="w-20 h-20 sm:w-24 sm:h-24 object-contain rounded-xl bg-white p-2 border border-brand-200" />
+          <div>
+            <h4 class="font-serif font-semibold text-surface-dark text-lg">Embalagem de Presente Afetiva Inclusa</h4>
+            <p class="text-xs text-surface-subtle mt-0.5 max-w-md">
+              Todos os itens chegam acomodados em uma embalagem perfumada, protegida e pronta para emocionar qualquer mamãe, papai ou avós.
+            </p>
+          </div>
+        </div>
+        <a href="https://wa.me/5521971324060?text=Ol%C3%A1!%20Quero%20fazer%20o%20pedido%20do%20Kit%20de%20Mem%C3%B3rias." target="_blank" class="bg-brand-500 hover:bg-brand-600 text-white text-xs font-semibold px-6 py-3.5 rounded-full pill-btn whitespace-nowrap">
+          Quero Meu Kit Completo →
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 2: O Dilema da Mãe (Storytelling & Identificação) -->
+  <section id="dilema" class="py-20 px-4 md:px-8">
+    <div class="max-w-5xl mx-auto space-y-16">
+      
+      <!-- Bloco de Dor -->
+      <div class="bg-white p-8 md:p-12 rounded-[32px] border border-surface-border space-y-6">
+        <span class="text-xs font-bold uppercase tracking-widest text-brand-500">Você se identifica com isso?</span>
+        <h2 class="font-serif text-2xl sm:text-3xl text-surface-dark leading-tight">
+          Se você é mãe, você passa por isso quase todo dia:
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+          <div class="flex items-start gap-3 bg-surface p-4 rounded-2xl border border-surface-border">
+            <span class="text-red-400 font-bold text-lg">✕</span>
+            <p class="text-xs text-surface-subtle leading-relaxed">
+              Você fotografa cada detalhe, cada sorriso e cada gracinha do seu bebê no celular.
+            </p>
+          </div>
+          <div class="flex items-start gap-3 bg-surface p-4 rounded-2xl border border-surface-border">
+            <span class="text-red-400 font-bold text-lg">✕</span>
+            <p class="text-xs text-surface-subtle leading-relaxed">
+              Você sabe no fundo que essa fase passa voando e que eles crescem rápido demais.
+            </p>
+          </div>
+          <div class="flex items-start gap-3 bg-surface p-4 rounded-2xl border border-surface-border">
+            <span class="text-red-400 font-bold text-lg">✕</span>
+            <p class="text-xs text-surface-subtle leading-relaxed">
+              Mas as fotos mais preciosas ficam perdidas no meio de milhares de prints, boletos, memes e vídeos aleatórios.
+            </p>
+          </div>
+          <div class="flex items-start gap-3 bg-surface p-4 rounded-2xl border border-surface-border">
+            <span class="text-red-400 font-bold text-lg">✕</span>
+            <p class="text-xs text-surface-subtle leading-relaxed">
+              Você pensa: <em>"vou organizar tudo no fim de semana"</em>... mas a rotina não perdoa e os meses vão passando.
+            </p>
+          </div>
+        </div>
+
+        <p class="text-xs text-surface-subtle italic border-l-2 border-brand-300 pl-3">
+          Assim o bebê cresce, e aqueles momentos únicos e irrepetíveis continuam presos numa tela fria de celular.
+        </p>
+      </div>
+
+      <!-- Bloco da Transformação -->
+      <div class="bg-gradient-to-br from-brand-500 to-brand-600 text-white p-8 md:p-14 rounded-[36px] shadow-xl space-y-6">
+        <span class="text-xs font-bold uppercase tracking-widest text-brand-200">Agora imagina o contrário...</span>
+        <h2 class="font-serif text-3xl sm:text-4xl leading-tight">
+          A história do seu filho contada por você, <br class="hidden sm:inline" />
+          do jeito que ela merece ser lembrada.
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
+          <div class="bg-white/10 backdrop-blur-sm p-5 rounded-2xl border border-white/10 space-y-2">
+            <span class="text-brand-200 font-bold text-lg">01.</span>
+            <h4 class="font-semibold text-sm">Sem esforço na sua rotina</h4>
+            <p class="text-xs text-white/80 leading-relaxed">
+              Você só precisa mandar as fotos que mais ama pelo WhatsApp. Nós cuidamos do tratamento e da diagramação com carinho.
+            </p>
+          </div>
+
+          <div class="bg-white/10 backdrop-blur-sm p-5 rounded-2xl border border-white/10 space-y-2">
+            <span class="text-brand-200 font-bold text-lg">02.</span>
+            <h4 class="font-semibold text-sm">Papel fotográfico que dura</h4>
+            <p class="text-xs text-white/80 leading-relaxed">
+              Revelação química profissional que não desbota, não mancha com o tempo e foi feita para durar mais de 100 anos.
+            </p>
+          </div>
+
+          <div class="bg-white/10 backdrop-blur-sm p-5 rounded-2xl border border-white/10 space-y-2">
+            <span class="text-brand-200 font-bold text-lg">03.</span>
+            <h4 class="font-semibold text-sm">O futuro que emociona</h4>
+            <p class="text-xs text-white/80 leading-relaxed">
+              Seu filho aos 15 ou 20 anos folheando o livro ao seu lado e revivendo a infância que você guardou com tanto amor.
+            </p>
+          </div>
+        </div>
+
+        <div class="pt-4 text-center sm:text-left">
+          <a href="https://wa.me/5521971324060?text=Ol%C3%A1!%20Quero%20garantir%20o%20Kit%20de%20Mem%C3%B3rias%20por%20pre%C3%A7o%20%C3%BAnico." target="_blank" class="inline-flex items-center gap-2 bg-white text-brand-700 hover:bg-brand-50 px-8 py-4 rounded-full font-bold text-sm pill-btn shadow-md">
+            <span>Quero Eternizar as Memórias do Meu Filho</span>
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.297.144.35.491 1.199.534 1.286.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.275.072.376-.043.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.203c.043.072.043.419-.101.824z"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 3: Como Funciona (Sem Assinatura) -->
+  <section id="como-funciona" class="py-20 bg-white border-y border-surface-border">
+    <div class="max-w-6xl mx-auto px-4 md:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs font-bold uppercase tracking-widest text-brand-500">Sem Burocracia</span>
+        <h2 class="font-serif text-3xl sm:text-4xl text-surface-dark mt-1">Como você pede o seu Kit?</h2>
+        <p class="text-surface-subtle text-sm mt-2">
+          Ao contrário de clubes de assinatura que cobram todo mês no seu cartão, aqui você paga um <strong>preço único</strong> e recebe tudo pronto.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        
+        <!-- Step 1 -->
+        <div class="bg-surface p-6 rounded-3xl border border-surface-border space-y-3">
+          <span class="w-9 h-9 rounded-full bg-brand-500 text-white font-bold text-sm flex items-center justify-center">1</span>
+          <h3 class="font-serif text-xl text-surface-dark">Você Pede o Kit</h3>
+          <p class="text-xs text-surface-subtle leading-relaxed">
+            Chama a gente no WhatsApp e garante o seu Kit pelo valor promocional de preço único, sem mensalidade.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="bg-surface p-6 rounded-3xl border border-surface-border space-y-3">
+          <span class="w-9 h-9 rounded-full bg-brand-500 text-white font-bold text-sm flex items-center justify-center">2</span>
+          <h3 class="font-serif text-xl text-surface-dark">Envia suas Fotos</h3>
+          <p class="text-xs text-surface-subtle leading-relaxed">
+            Pelo próprio WhatsApp, você envia as fotos do seu bebê direto da galeria do celular, sem precisar baixar apps chatos.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="bg-surface p-6 rounded-3xl border border-surface-border space-y-3">
+          <span class="w-9 h-9 rounded-full bg-brand-500 text-white font-bold text-sm flex items-center justify-center">3</span>
+          <h3 class="font-serif text-xl text-surface-dark">Aprova as Legendas</h3>
+          <p class="text-xs text-surface-subtle leading-relaxed">
+            Personalizamos as frases, datas e o nome do seu pequeno nas fotos e no livro, mandando a prévia para você conferir.
+          </p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="bg-surface p-6 rounded-3xl border border-surface-border space-y-3">
+          <span class="w-9 h-9 rounded-full bg-brand-500 text-white font-bold text-sm flex items-center justify-center">4</span>
+          <h3 class="font-serif text-xl text-surface-dark">Recebe em Casa</h3>
+          <p class="text-xs text-surface-subtle leading-relaxed">
+            Produzimos artesanalmente e enviamos a caixa cheia de afeto com código de rastreamento para qualquer lugar do Brasil.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 4: Diferencial de Qualidade & Garantia -->
+  <section id="garantia" class="py-20 px-4 md:px-8">
+    <div class="max-w-6xl mx-auto">
+      
+      <div class="bg-white rounded-[36px] p-8 md:p-14 border border-surface-border shadow-sm">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          
+          <div class="lg:col-span-7 space-y-6">
+            <span class="text-xs font-bold uppercase tracking-widest text-brand-600">Qualidade Incomparável</span>
+            <h2 class="font-serif text-3xl sm:text-4xl text-surface-dark leading-tight">
+              Qual a diferença entre a nossa revelação e uma impressão comum?
+            </h2>
+            <p class="text-surface-subtle text-sm leading-relaxed">
+              Muitas empresas usam impressoras jato de tinta comuns que desbotam ou mancham com poucos meses de exposição ao sol e à umidade.
+            </p>
+
+            <div class="space-y-4">
+              <div class="flex items-start gap-3">
+                <div class="w-6 h-6 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">✓</div>
+                <div>
+                  <h4 class="font-semibold text-surface-dark text-sm">Processo Químico Profissional</h4>
+                  <p class="text-xs text-surface-subtle">Cores vivas, pretos profundos e definição impecável da pele do bebê.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <div class="w-6 h-6 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">✓</div>
+                <div>
+                  <h4 class="font-semibold text-surface-dark text-sm">Durabilidade de até 100+ Anos</h4>
+                  <p class="text-xs text-surface-subtle">Papel fotográfico profissional resistente que não amarela e atravessa gerações.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <div class="w-6 h-6 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">✓</div>
+                <div>
+                  <h4 class="font-semibold text-surface-dark text-sm">Garantia Total de Satisfação</h4>
+                  <p class="text-xs text-surface-subtle">Se você receber e não se apaixonar pela qualidade, nós refazemos ou devolvemos seu dinheiro.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5">
+            <div class="rounded-3xl overflow-hidden border border-brand-200 bg-brand-50 p-4">
+              <img src="https://pub-237657c8ca274dda82b4f50a8f047004.r2.dev/arte-afetiva/memorias/livro-de-memorias-poster-polaroids.png" alt="Livro, Poster e Polaroids" class="w-full h-auto object-cover rounded-2xl" />
+              <p class="text-center text-[11px] text-surface-subtle mt-3 font-medium">Kit real fotografado com todos os itens do pacote.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 5: Logística / Todo o Brasil -->
+  <section class="py-12 bg-brand-50">
+    <div class="max-w-6xl mx-auto px-4 md:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6 bg-white p-8 rounded-3xl border border-brand-200 shadow-sm">
+        <div class="space-y-1">
+          <span class="text-xs font-bold uppercase tracking-wider text-brand-600">Envio Seguro</span>
+          <h3 class="font-serif text-2xl text-surface-dark">Entregamos seu Kit em qualquer lugar do Brasil</h3>
+          <p class="text-xs text-surface-subtle">Enviamos via Correios (PAC/Sedex) e transportadoras rápidas com código de rastreamento direto no seu WhatsApp.</p>
+        </div>
+        <a href="https://wa.me/5521971324060?text=Ol%C3%A1!%20Gostaria%20de%20consultar%20o%20frete%20do%20Kit%20de%20Mem%C3%B3rias%20para%20o%20meu%20CEP." target="_blank" class="bg-surface-dark hover:bg-black text-white text-xs font-semibold px-6 py-3.5 rounded-full pill-btn whitespace-nowrap">
+          Calcular Frete no WhatsApp ↗
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 6: FAQ Accordion -->
+  <section id="duvidas" class="py-20 px-4 md:px-8">
+    <div class="max-w-3xl mx-auto space-y-8">
+      
+      <div class="text-center space-y-2">
+        <span class="text-xs font-bold uppercase tracking-widest text-brand-500">Tire Suas Dúvidas</span>
+        <h2 class="font-serif text-3xl text-surface-dark">Perguntas Frequentes</h2>
+      </div>
+
+      <div class="space-y-3">
+        
+        <!-- FAQ 1 -->
+        <details class="group bg-white p-5 rounded-2xl border border-surface-border [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex items-center justify-between cursor-pointer font-semibold text-sm text-surface-dark">
+            <span>É um plano de assinatura mensal ou pagamento único?</span>
+            <span class="transition duration-300 group-open:rotate-180 text-brand-500">▼</span>
+          </summary>
+          <p class="text-xs text-surface-subtle mt-3 leading-relaxed">
+            <strong>É pagamento único!</strong> Aqui na Arte Afetiva você não fica presa a mensalidades ou cobranças recorrentes no cartão. Você compra o kit completo de uma só vez pelo valor promocional.
+          </p>
+        </details>
+
+        <!-- FAQ 2 -->
+        <details class="group bg-white p-5 rounded-2xl border border-surface-border [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex items-center justify-between cursor-pointer font-semibold text-sm text-surface-dark">
+            <span>Como faço para enviar as fotos?</span>
+            <span class="transition duration-300 group-open:rotate-180 text-brand-500">▼</span>
+          </summary>
+          <p class="text-xs text-surface-subtle mt-3 leading-relaxed">
+            É super simples: após fechar o pedido, nós te chamamos no WhatsApp e você envia as fotos direto da sua galeria. Não precisa baixar nenhum aplicativo externo ou complicar nada.
+          </p>
+        </details>
+
+        <!-- FAQ 3 -->
+        <details class="group bg-white p-5 rounded-2xl border border-surface-border [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex items-center justify-between cursor-pointer font-semibold text-sm text-surface-dark">
+            <span>E se eu ainda não tiver todas as fotos selecionadas?</span>
+            <span class="transition duration-300 group-open:rotate-180 text-brand-500">▼</span>
+          </summary>
+          <p class="text-xs text-surface-subtle mt-3 leading-relaxed">
+            Não tem problema! Você pode garantir o preço promocional hoje e nos enviar as fotos quando tiver tempo com calma. Nós aguardamos o seu envio para iniciar a confecção.
+          </p>
+        </details>
+
+        <!-- FAQ 4 -->
+        <details class="group bg-white p-5 rounded-2xl border border-surface-border [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex items-center justify-between cursor-pointer font-semibold text-sm text-surface-dark">
+            <span>Vocês mandam prévia antes de imprimir?</span>
+            <span class="transition duration-300 group-open:rotate-180 text-brand-500">▼</span>
+          </summary>
+          <p class="text-xs text-surface-subtle mt-3 leading-relaxed">
+            Sim! Enviamos uma simulação digital com o nome do bebê e as legendas para você aprovar pelo WhatsApp antes de enviarmos para a impressão e montagem.
+          </p>
+        </details>
+
+        <!-- FAQ 5 -->
+        <details class="group bg-white p-5 rounded-2xl border border-surface-border [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex items-center justify-between cursor-pointer font-semibold text-sm text-surface-dark">
+            <span>Qual é o prazo de entrega?</span>
+            <span class="transition duration-300 group-open:rotate-180 text-brand-500">▼</span>
+          </summary>
+          <p class="text-xs text-surface-subtle mt-3 leading-relaxed">
+            O prazo de produção artesanal é de 5 a 8 dias úteis após a aprovação das fotos, mais o prazo do frete até a sua residência.
+          </p>
+        </details>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA Banner Final -->
+  <section class="pb-20 px-4 md:px-8">
+    <div class="max-w-6xl mx-auto">
+      <div class="bg-gradient-to-r from-brand-600 via-brand-500 to-brand-400 rounded-[36px] p-8 md:p-14 text-white text-center space-y-6 shadow-xl">
+        <h2 class="font-serif text-3xl sm:text-4xl max-w-xl mx-auto leading-tight">
+          O tempo não volta atrás. Eternize o primeiro ano do seu bebê hoje.
+        </h2>
+        <p class="text-white/90 text-sm max-w-md mx-auto">
+          Preço único, sem mensalidades. Peça seu kit completo pelo WhatsApp e receba na sua porta com todo o afeto.
+        </p>
+        <div>
+          <a href="https://wa.me/5521971324060?text=Ol%C3%A1!%20Quero%20garantir%20meu%20Kit%20Cole%C3%A7%C3%A3o%20de%20Mem%C3%B3rias%20do%20Beb%C3%AA%20por%20pre%C3%A7o%20%C3%BAnico." target="_blank" class="inline-flex items-center gap-2 bg-white text-brand-700 hover:bg-brand-50 px-8 py-4 rounded-full font-bold text-sm shadow-md pill-btn">
+            <span>Pedir Meu Kit no WhatsApp (21) 97132-4060</span>
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.297.144.35.491 1.199.534 1.286.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.275.072.376-.043.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.203c.043.072.043.419-.101.824z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-surface-dark text-white pt-16 pb-12 border-t border-surface-dark">
+    <div class="max-w-6xl mx-auto px-4 md:px-8 space-y-12">
+      
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        
+        <div class="space-y-3 md:col-span-2">
+          <div class="flex items-center gap-2">
+            <span class="font-serif text-xl font-bold tracking-tight">Arte Afetiva</span>
+          </div>
+          <p class="text-xs text-white/60 max-w-sm leading-relaxed">
+            Kit Coleção de Memórias do Bebê. Papelaria personalizada e afetiva, sacolas, álbuns e lembranças que transformam amor em arte duradoura.
+          </p>
+        </div>
+
+        <div class="space-y-2">
+          <h5 class="text-xs font-bold uppercase tracking-wider text-brand-400">Navegação</h5>
+          <ul class="text-xs space-y-1.5 text-white/70">
+            <li><a href="index.html" class="hover:text-white transition">Papelaria & Sacolas</a></li>
+            <li><a href="#o-que-vem" class="hover:text-white transition">O que vem no Kit</a></li>
+            <li><a href="#como-funciona" class="hover:text-white transition">Como Funciona</a></li>
+            <li><a href="#garantia" class="hover:text-white transition">Qualidade da Revelação</a></li>
+          </ul>
+        </div>
+
+        <div class="space-y-2">
+          <h5 class="text-xs font-bold uppercase tracking-wider text-brand-400">Atendimento</h5>
+          <ul class="text-xs space-y-1.5 text-white/70">
+            <li>WhatsApp: (21) 97132-4060</li>
+            <li>Envios: Todo o Brasil</li>
+            <li>Horário: Seg a Sex, 9h às 18h</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between text-xs text-white/40 gap-4">
+        <p>© 2026 Arte Afetiva. Todos os direitos reservados.</p>
+        <p>Desenvolvido com carinho e precisão artesanal.</p>
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>
